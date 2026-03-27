@@ -32,11 +32,16 @@ const Header = () => {
   }
 
   return (
-    <header style={{ backgroundColor: '#380709'}} className="text-white py-10 sticky top-0 z-50 shadow-lg font-serif font-bold">
+    // #1A0D0E 380709
+    <header style={{ backgroundColor: '#1A0D0E'}} className="text-white py-10 sticky top-0 z-50 shadow-lg font-serif font-bold">
       <div className="max-w-7xl mx-auto px-4">
-        <nav className="flex items-center justify-between">
+         <a href="/" className="text-2xl font-bold tracking-widest absolute ">
+            healing.studio
+          </a>
+        
+        <nav className="flex items-center justify-end">
           {/* Left Menu */}
-          <ul className="flex items-center gap-8 text-md">
+          <ul className="flex items-center gap-2  text-md">
             <li>
               <a href="/" className="hover:text-gray-300 transition">
                 Trang Chủ
@@ -48,11 +53,9 @@ const Header = () => {
               onMouseEnter={() => setIsPreWeddingOpen(true)}
               onMouseLeave={() => setIsPreWeddingOpen(false)}
             >
-              <a href="/prewedding" className="hover:text-gray-300 transition flex items-center gap-1">
+              <a href="/prewedding" className="hover:text-gray-300 transition flex items-center gap-1 pl-8 pr-8">
                 Pre-Wedding
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
+               
               </a>
               
               <AnimatePresence>
@@ -76,28 +79,42 @@ const Header = () => {
                     >
                       Ngoại Cảnh
                     </a>
-                    <a 
-                      href="/prewedding/album" 
-                      className="block px-4 py-2 hover:bg-gray-100 transition"
-                    >
-                      Album
-                    </a>
+                  
                   </motion.div>
                 )}
               </AnimatePresence>
             </li>
 
             {/* Film Dropdown */}
+          
+          </ul>
+
+         
+
+          {/* Right Menu */}
+          <ul className="flex items-center gap-8 text-md">
+            {/* Phóng Sự Dropdown */}
             <li 
+              className="relative"
+              onMouseEnter={() => setIsPhongSuOpen(true)}
+              onMouseLeave={() => setIsPhongSuOpen(false)}
+            >
+              <button className="hover:text-gray-300 transition flex items-center gap-1">
+                Wedding Day
+               
+              </button>
+              
+             
+            </li>
+
+  <li 
               className="relative"
               onMouseEnter={() => setIsFilmOpen(true)}
               onMouseLeave={() => setIsFilmOpen(false)}
             >
               <button className="hover:text-gray-300 transition flex items-center gap-1">
                 Film
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
+               
               </button>
               
               <AnimatePresence>
@@ -125,54 +142,6 @@ const Header = () => {
                 )}
               </AnimatePresence>
             </li>
-          </ul>
-
-          {/* Center Logo */}
-          <a href="/" className="text-2xl font-bold tracking-widest absolute left-1/2 transform -translate-x-1/2">
-            HEALING. STUDIO
-          </a>
-
-          {/* Right Menu */}
-          <ul className="flex items-center gap-8 text-md">
-            {/* Phóng Sự Dropdown */}
-            <li 
-              className="relative"
-              onMouseEnter={() => setIsPhongSuOpen(true)}
-              onMouseLeave={() => setIsPhongSuOpen(false)}
-            >
-              <button className="hover:text-gray-300 transition flex items-center gap-1">
-                Phóng Sự
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              
-              <AnimatePresence>
-                {isPhongSuOpen && (
-                  <motion.div 
-                    variants={dropdownVariants}
-                    initial="hidden"
-                    animate="visible"
-                    exit="exit"
-                    className="absolute top-full left-0 bg-white text-gray-800 shadow-lg rounded-md mt-2 min-w-[150px] overflow-hidden"
-                  >
-                    <a 
-                      href="/phongsu/le-gia-tien" 
-                      className="block px-4 py-2 hover:bg-gray-100 transition"
-                    >
-                      Lễ Gia Tiên
-                    </a>
-                    <a 
-                      href="/phongsu/tiec-cuoi" 
-                      className="block px-4 py-2 hover:bg-gray-100 transition"
-                    >
-                      Tiệc Cưới
-                    </a>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </li>
-
             <li>
               <a href="/dich-vu" className="hover:text-gray-300 transition">
                 Dịch Vụ

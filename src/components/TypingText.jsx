@@ -46,7 +46,7 @@ const TypingText = ({ className }) => {
       Chụp Ảnh Cưới{' '}
       <motion.span 
         key={index} 
-        className="text-[#D80032] font-semibold inline-block relative" // Màu đỏ và vị trí
+        className="color-[#380709] font-semibold inline-block relative" // Màu đỏ và vị trí
       >
         {words[index].substring(0, subIndex)}
         {/* Con trỏ nhấp nháy */}
@@ -54,7 +54,7 @@ const TypingText = ({ className }) => {
             initial={{ opacity: 1 }} 
             animate={{ opacity: 0 }} 
             transition={{ yoyo: Infinity, duration: 0.5, ease: "linear" }}
-            className="w-1 bg-[#D80032] inline-block h-full absolute"
+            className="w-1 bg-[#380709] inline-block h-full absolute"
         ></motion.span>
       </motion.span>
     </motion.p>

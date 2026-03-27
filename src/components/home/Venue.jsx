@@ -12,7 +12,7 @@ const Venue = () => {
   }
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-[#f7f5f3]">
       <div className="max-w-[1400px] mx-auto px-8">
         <div className="relative flex gap-6 items-start mb-24">
           <div className="flex flex-col gap-6" style={{ width: '280px' }}>

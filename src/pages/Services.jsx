@@ -9,26 +9,27 @@ const servicePackages = [
     {
         id: 'prewedding',
         title: 'GÓI CHỤP PREWEDDING',
-        subtitle: 'Lưu giữ khoảnh khắc trước hôn lễ',
-        description: 'Chụp ảnh ngoại cảnh hoặc studio, tạo ra album lãng mạn, độc đáo, thể hiện cá tính riêng của cặp đôi.',
         image: 'https://images.unsplash.com/photo-1549444131-01f2f010375d?w=800&q=80',
         link: '/prewedding/stu',
         icon: <FaCameraRetro size={40} className="text-[#FFB86B]" />
     },
     {
         id: 'phongsu',
-        title: 'GÓI PHÓNG SỰ CƯỚI',
-        subtitle: 'Câu chuyện ngày cưới chân thật',
-        description: 'Ghi lại mọi cảm xúc, sự kiện trong ngày trọng đại (Lễ, Tiệc), mang tính báo chí, tự nhiên và xúc động.',
+        title: 'QUAY & CHỤP PHÓNG SỰ CƯỚI',
         image: 'https://images.unsplash.com/photo-1583939336118-2e1189280d46?w=800&q=80',
         link: '/dich-vu/phong-su',
         icon: <FaVideo size={40} className="text-[#FFB86B]" />
     },
     {
         id: 'album',
-        title: 'GÓI CHỤP HỘI NGHỊ/SỰ KIỆN',
-        subtitle: 'Ghi hình chuyên nghiệp cho doanh nghiệp',
-        description: 'Cung cấp dịch vụ quay chụp cho các sự kiện, hội thảo, khai trương với chất lượng hình ảnh cao cấp và sắc nét.',
+        title: 'GÓI MAKEUP CÔ DÂU',
+        image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80',
+        link: '/dich-vu/hoi-nghi',
+        icon: <FaHeart size={40} className="text-[#FFB86B]" />
+    },
+    {
+        id: 'album',
+        title: 'GÓI THUÊ ĐỒ CƯỚI',
         image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80',
         link: '/dich-vu/hoi-nghi',
         icon: <FaHeart size={40} className="text-[#FFB86B]" />
@@ -97,7 +98,7 @@ const Services = () => {
                     <h2 className="text-4xl font-serif text-center mb-12 text-[#380709]">
                         Các Gói Dịch Vụ Nổi Bật
                     </h2>
-                    <div className="grid md:grid-cols-3 gap-10">
+                    <div className="grid md:grid-cols-4 gap-10">
                         {servicePackages.map((pkg) => (
                             <motion.div
                                 key={pkg.id}
@@ -119,15 +120,15 @@ const Services = () => {
                                     {/* Nội dung */}
                                     <div className="p-6 text-center">
                                         <div className="mx-auto mb-4">{pkg.icon}</div>
-                                        <h3 className="text-2xl font-serif mb-1 text-[#380709]">
+                                        <h3 className="text-1xl font-serif mb-1 text-[#380709]">
                                             {pkg.title}
                                         </h3>
-                                        <p className="text-sm text-[#FFB86B] mb-4 uppercase font-medium">
-                                            {pkg.subtitle}
-                                        </p>
-                                        <p className="text-gray-600 mb-6">
-                                            {pkg.description}
-                                        </p>
+
+                                        <h3 className="text-1xl font-serif mb-1 text-[#380709] mb-4">
+                                            Báo Giá: Liên Hệ
+                                        </h3>
+                                        
+                                     
                                         
                                         <Link to={pkg.link}>
                                             <motion.button
@@ -144,7 +145,7 @@ const Services = () => {
                                                     transition-colors
                                                 "
                                             >
-                                                Xem Chi Tiết
+                                               Liên Hệ Ngay
                                             </motion.button>
                                         </Link>
                                     </div>
@@ -156,29 +157,17 @@ const Services = () => {
             </motion.div>
 
             {/* ================= PHẦN ĐẶC ĐIỂM NỔI BẬT ================= */}
-            <div className="bg-gray-50 py-20">
-                <Container>
-                    <h2 className="text-4xl font-serif text-center mb-16 text-[#380709]">
-                        Tại Sao Chọn Healing Studio?
-                    </h2>
-                    <div className="grid md:grid-cols-4 gap-10 text-center">
-                        
-                        {['Nhiếp ảnh gia giàu kinh nghiệm', 'Chất lượng ảnh độ phân giải cao', 'Dịch vụ cá nhân hóa, tận tâm', 'Giá cả minh bạch, cạnh tranh'].map((feature, index) => (
-                             <motion.div
-                                key={index}
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                                viewport={{ once: true }}
-                                className="flex flex-col items-center"
-                            >
-                                <div className="text-[#FFB86B] mb-4">
-                                    <FaHeart size={30} />
-                                </div>
-                                <h4 className="text-xl font-medium text-[#380709]">{feature}</h4>
-                            </motion.div>
-                        ))}
-                    </div>
+            <div className="bg-[#1a0d0e] w-full py-32 ">
+                <Container className='grid grid-cols-12 gap-10 items-center justify-center h-full'>
+                       <div className='col-span-6 justify-center items-center flex'>
+                        <img className='w-[340px] h-[500px]' src="./images/service.jpg" alt="" />
+                   </div>
+                   <div className='col-span-6 justify-start items-start flex flex-col gap-6 '>
+                    <p className='text-white text-1xl font-serif'>" Telling your story through film, photography, and feeling. "</p>
+                    <p className='text-white text-3xl font-serif'>healing.studio</p>
+
+                   </div>
+                
                 </Container>
             </div>
             

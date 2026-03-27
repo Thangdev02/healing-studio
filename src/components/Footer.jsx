@@ -14,18 +14,16 @@ const Footer = () => {
         <div 
           className="
             relative 
-            h-[500px] 
+            h-[600px] 
             mb-16 
             overflow-hidden
-            // Bỏ Container ra khỏi phần này
           "
         >
           {/* Lớp phủ ảnh nền (Background Image) - Đảm bảo tràn màn hình */}
           <div 
-            className="absolute inset-0 bg-cover bg-center" 
+            className="absolute inset-0 bg-cover bg-center  " 
             style={{ 
-              backgroundImage: "url('./footer.png')",
-              // Kích thước mặc định của absolute inset-0 đã là full width/height của cha
+              backgroundImage: "url('./images/footer.jpg')",
             }} 
           >
             {/* Lớp phủ màu tối */}
@@ -34,13 +32,15 @@ const Footer = () => {
 
           {/* Nội dung (Text và Icons) - Sử dụng Container để căn giữa và giới hạn chiều rộng */}
           <Container>
-            <div className="relative z-10 h-[500px] flex flex-col items-center justify-center text-center">
-              <h2 className="text-4xl font-serif mb-8 tracking-widest">
+            <div className="relative z-10 h-[500px] flex flex-col items-end justify-center">
+              <div className='d-flex flex-col items-center justify-center text-center'>
+                
+              <h2 className="text-4xl font-serif mb-8 ml-4">
                 KẾT NỐI VỚI HEALING STUDIO
               </h2>
               
               {/* Social Icons trên ảnh nền */}
-              <div className="flex gap-8 text-white">
+              <div className="flex gap-8 text-white justify-center">
                 <a href="#" className="hover:text-[#FFB86B] transition">
                   <FaInstagram size={28} />
                 </a>
@@ -50,6 +50,8 @@ const Footer = () => {
                 <a href="#" className="hover:text-[#FFB86B] transition">
                   <FaFacebookF size={28} />
                 </a>
+              </div>
+
               </div>
             </div>
           </Container>
@@ -69,11 +71,11 @@ const Footer = () => {
               <ul className="text-sm text-gray-400 space-y-3">
                 <li className='flex items-center'>
                   <MdPhone className='mr-2 text-base'/> 
-                  097498 946 584
+                  035.560.3038 (Hoàng Anh)
                 </li>
                 <li className='flex items-center'>
                   <MdEmail className='mr-2 text-base'/> 
-                  healingstudio@studio.com
+                  healingstudio86@gmail.com
                 </li>
               </ul>
             </div>
@@ -81,7 +83,7 @@ const Footer = () => {
             {/* Cột 2: HEALING STUDIO (Center) */}
             <div className="text-center flex justify-center items-start">
               <h3 className="font-serif text-4xl tracking-widest">
-                HEALING STUDIO
+                healing.studio
               </h3>
             </div>
 
@@ -99,7 +101,7 @@ const Footer = () => {
 
           {/* Copyright (Giữ nguyên) */}
           <div className="mt-12 pt-8 border-t border-gray-800 text-center text-sm text-gray-400">
-            © 2025 HEALING STUDIO. All rights reserved.
+            © 2025 healing.studio. All rights reserved.
           </div>
         </Container>
     </footer>

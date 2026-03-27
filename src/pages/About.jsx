@@ -40,7 +40,7 @@ const About = () => {
                             className="text-5xl font-serif mb-2 text-[#380709]"
                             variants={itemVariants}
                         >
-                            HEALING STUDIO
+                            HEALING WEDDING
                         </motion.h1>
                         
                         {/* HIỆU ỨNG TEXT TYPING THEO THỬ THÁCH */}
@@ -57,7 +57,7 @@ const About = () => {
                             <ul className="space-y-3">
                                 <li className="flex items-center gap-3">
                                     <MdPhone className="text-xl text-[#380709]" />
-                                    <span className="text-gray-700">0335609398 (Hoàng Anh)</span>
+                                    <span className="text-gray-700">035.560.3038 (Hoàng Anh)</span>
                                 </li>
                                 <li className="flex items-start gap-3">
                                     <MdLocationOn className="text-xl text-[#380709] mt-0.5 flex-shrink-0" />
@@ -70,13 +70,13 @@ const About = () => {
                     {/* Cột 2: Ảnh Ngoại Cảnh */}
                     <motion.div className="relative pt-6" variants={itemVariants}>
                         <img 
-                            src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800" // Ảnh studio ngoại thất
+                            src="./images/studio.jpg" // Ảnh studio ngoại thất
                             alt="Healing Studio Ngoại Cảnh" 
                             className="w-full h-auto rounded-xl shadow-2xl"
                         />
                         {/* Overlay Text như trong Figma */}
                         <div className="absolute bottom-5 right-5 bg-white/70 backdrop-blur-sm px-4 py-2 rounded-lg text-lg font-serif text-[#380709]">
-                            Healing Studio
+                            healing.studio
                         </div>
                     </motion.div>
                 </motion.div>

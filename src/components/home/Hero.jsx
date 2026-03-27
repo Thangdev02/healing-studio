@@ -34,7 +34,7 @@ const Hero = () => {
 
     return (
         <motion.section 
-            style={{ backgroundColor: '#1A0D0E' }} 
+            style={{ backgroundColor: '#000000' }} 
             className="text-white py-12 md:py-20"
         >
             <div className="max-w-6xl mx-auto px-4">
@@ -46,8 +46,16 @@ const Hero = () => {
                     initial="hidden"
                     animate="visible"
                 >
-                    Trọn bộ dịch vụ chụp ảnh cưới | Healing.Studio
+                    HEALING WHERE LOVE MEETS STYLE
                 </motion.h1>
+                    <motion.h2 
+                    className="text-3xl md:text-4xl font-serif text-center mb-10"
+                    variants={titleVariants}
+                    initial="hidden"
+                    animate="visible"
+                >
+                  Nơi cảm xúc và gu thẩm mỹ giao nhau.
+                </motion.h2>
 
                 {/* Image Grid - Container cho hiệu ứng stagger */}
                 <motion.div 
@@ -60,13 +68,13 @@ const Hero = () => {
 
                     {/* Ảnh Lớn - Xuất hiện từ bên trái */}
                     <motion.div 
-                        className="rounded-2xl overflow-hidden md:col-span-2 shadow-xl"
+                        className=" overflow-hidden md:col-span-2 shadow-xl"
                         variants={mainImageVariants}
                         whileHover={{ scale: 1.02 }} // Hiệu ứng hover: phóng to nhẹ
                         transition={{ duration: 0.3 }}
                     >
                         <img 
-                            src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80" 
+                            src="./images/hero1.jpg" 
                             alt="Wedding couple" 
                             className="w-full h-full object-cover"
                             style={{ height: '480px' }}
@@ -78,13 +86,13 @@ const Hero = () => {
                         
                         {/* Ảnh Nhỏ 1 - Xuất hiện từ bên phải */}
                         <motion.div 
-                            className="rounded-2xl overflow-hidden shadow-xl"
+                            className=" overflow-hidden shadow-xl"
                             variants={imageVariants}
                             whileHover={{ scale: 1.05 }} // Hiệu ứng hover mạnh hơn
                             transition={{ duration: 0.3 }}
                         >
                             <img 
-                                src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=600&q=80" 
+                            src="./images/hero3.jpg" 
                                 alt="Wedding details" 
                                 className="w-full h-full object-cover"
                                 style={{ height: '240px' }}
@@ -93,13 +101,13 @@ const Hero = () => {
                         
                         {/* Ảnh Nhỏ 2 - Xuất hiện từ bên phải (với độ trễ của staggerChildren) */}
                         <motion.div 
-                            className="rounded-2xl overflow-hidden shadow-xl"
+                            className=" overflow-hidden shadow-xl"
                             variants={imageVariants}
                             whileHover={{ scale: 1.05 }} // Hiệu ứng hover mạnh hơn
                             transition={{ duration: 0.3 }}
                         >
                             <img 
-                                src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&q=80" 
+                            src="./images/hero4.jpg" 
                                 alt="Wedding rings" 
                                 className="w-full h-full object-cover"
                                 style={{ height: '240px' }}
