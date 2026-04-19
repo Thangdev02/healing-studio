@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Container from '../components/Container';
 // Import TypingText component
-import TypingText from '../components/TypingText'; 
+import TypingText from '../components/TypingText';
 // Import icons cho phần Liên Hệ
 import { MdPhone, MdLocationOn } from 'react-icons/md';
 
@@ -27,7 +27,7 @@ const About = () => {
         <div className="py-24 bg-white">
             <Container>
                 {/* Phần tiêu đề lớn và nội dung chính (2 cột) */}
-                <motion.div 
+                <motion.div
                     className="grid md:grid-cols-2 gap-16 items-start"
                     variants={containerVariants}
                     initial="hidden"
@@ -36,13 +36,13 @@ const About = () => {
                 >
                     {/* Cột 1: Thông tin Studio */}
                     <div className="space-y-6">
-                        <motion.h1 
+                        <motion.h1
                             className="text-5xl font-serif mb-2 text-[#380709]"
                             variants={itemVariants}
                         >
                             HEALING WEDDING
                         </motion.h1>
-                        
+
                         {/* HIỆU ỨNG TEXT TYPING THEO THỬ THÁCH */}
                         <TypingText className="text-2xl text-primary mb-8 font-serif" />
 
@@ -69,9 +69,9 @@ const About = () => {
 
                     {/* Cột 2: Ảnh Ngoại Cảnh */}
                     <motion.div className="relative pt-6" variants={itemVariants}>
-                        <img 
+                        <img
                             src="./images/studio.jpg" // Ảnh studio ngoại thất
-                            alt="Healing Studio Ngoại Cảnh" 
+                            alt="Healing Studio Ngoại Cảnh"
                             className="w-full h-auto rounded-xl shadow-2xl"
                         />
                         {/* Overlay Text như trong Figma */}
@@ -86,32 +86,51 @@ const About = () => {
                     <h2 className="text-4xl font-serif text-center mb-8 text-[#380709]">Bản Đồ</h2>
                     {/* Giả lập Bản Đồ (Thay bằng iframe Google Maps thực tế) */}
                     <div className="bg-gray-100 h-[500px] rounded-lg shadow-xl overflow-hidden">
-                    <iframe style={{ width: "100%", height: "100%" }} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.0260247649067!2d105.06433501098853!3d10.01470887273931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0b30006b5c9db%3A0xf6c0e4b775256a7d!2zSGVhbGluZyBTdHVkaW8gLSBDaOG7pXAg4bqibmggQ2jDom4gRHVuZywgQmVhdXR5LCBHaWEgxJDDrG5oLCDhuqJuaCBDxrDhu5tp!5e0!3m2!1svi!2s!4v1765820086186!5m2!1svi!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
+                        <iframe style={{ width: "100%", height: "100%" }} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.0260247649067!2d105.06433501098853!3d10.01470887273931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0b30006b5c9db%3A0xf6c0e4b775256a7d!2zSGVhbGluZyBTdHVkaW8gLSBDaOG7pXAg4bqibmggQ2jDom4gRHVuZywgQmVhdXR5LCBHaWEgxJDDrG5oLCDhuqJuaCBDxrDhu5tp!5e0!3m2!1svi!2s!4v1765820086186!5m2!1svi!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
                 </motion.div>
 
                 {/* Phần Hình Ảnh Của Studio */}
-                <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}>
+                <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} className='max-w-[1080px] mx-auto '>
                     <motion.h2 className="text-4xl font-serif text-center mb-12 text-[#380709]" variants={itemVariants}>
                         Một Số Hình Ảnh Của Studio
                     </motion.h2>
-                    <div className="grid md:grid-cols-2 gap-10">
-                        {/* Ảnh 1: Ảnh trang điểm/Nội thất */}
-                        <motion.img 
-                            src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=800" 
-                            alt="Studio Trang Điểm" 
-                            className="rounded-xl shadow-2xl w-full h-[550px] object-cover"
+
+                    {/* Hàng 1: đứng - ngang */}
+                    <div className="grid grid-cols-12 gap-4 mb-4">
+                        {/* Hình đứng (chiếm 1/3) */}
+                        <motion.img
+                            src="/images/contact1.jpg"
+                            alt="Studio Trang Điểm"
+                            className="rounded-xl shadow-2xl w-full h-[420px] object-cover col-span-4"
                             variants={itemVariants}
                         />
-                        {/* Ảnh 2: Ảnh Thiết bị/Ánh sáng */}
-                        <motion.div className="relative" variants={itemVariants}>
-                            <img 
-                                src="https://images.unsplash.com/photo-1506869640301-ce1c2d96e574?w=800" 
-                                alt="Studio Equipment" 
-                                className="rounded-xl shadow-2xl w-full h-[550px] object-cover"
+                        {/* Hình ngang (chiếm 2/3) */}
+                        <motion.img
+                            src="/images/contact2.jpg"
+                            alt="Studio Nội Thất"
+                            className="rounded-xl shadow-2xl w-full h-[420px] object-cover col-span-8"
+                            variants={itemVariants}
+                        />
+                    </div>
+
+                    {/* Hàng 2: ngang - đứng */}
+                    <div className="grid grid-cols-3 gap-4">
+                        {/* Hình ngang (chiếm 2/3) */}
+                        <motion.img
+                            src="/images/contact2.jpg"
+                            alt="Studio Ánh Sáng"
+                            className="rounded-xl shadow-2xl w-full h-[420px] object-cover col-span-2"
+                            variants={itemVariants}
+                        />
+                        {/* Hình đứng (chiếm 1/3) với overlay */}
+                        <motion.div className="relative col-span-1" variants={itemVariants}>
+                            <img
+                                src="/images/contact1.jpg"
+                                alt="Studio Equipment"
+                                className="rounded-xl shadow-2xl w-full h-[420px] object-cover"
                             />
-                            {/* Overlay Text lớn như trong Figma */}
-                            <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-                                <h3 className="text-white text-5xl font-serif tracking-widest leading-none">
+                            <div className="absolute inset-0 flex flex-col items-center justify-center text-center rounded-xl">
+                                <h3 className="text-white text-3xl font-serif tracking-widest leading-none">
                                     HEALING.STUDIO
                                 </h3>
                                 <p className="text-gray-200 text-sm mt-2">STUDIO PRESENTATION</p>

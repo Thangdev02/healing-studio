@@ -11,7 +11,6 @@ const PreWedding = () => {
   const titles = {
     'stu': 'STUDIO',
     'ngoai-canh': 'NGOẠI CẢNH',
-    'album': 'ALBUM'
   }
 
   // Lấy tiêu đề chính
@@ -51,7 +50,7 @@ const PreWedding = () => {
             {mainTitle}
           </p>
           <p className="text-lg opacity-80 max-w-xl mx-auto">
-            Chào mừng đến với bộ ảnh cưới trước hôn lễ của Healing Studio tại Việt Nam.
+            Welcome to Healing Studio's pre-wedding photo shoot at Rach Gia.
           </p>
         </Container>
       </div>

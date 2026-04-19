@@ -2,7 +2,7 @@ export const preweddingAlbums = {
     stu: [
       {
         id: 'stu-1',
-        title: 'Hải & Mai',
+        title: 'Bãi Cỏ',
         date: '15-12-2025',
         coverImage: 'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=600',
         images: [
@@ -16,6 +16,17 @@ export const preweddingAlbums = {
       },
       {
         id: 'stu-2',
+        title: 'Thắng & Thu',
+        date: '14-12-2025',
+        coverImage: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=600',
+        images: [
+          'https://images.unsplash.com/photo-1519741497674-611481863552?w=800',
+          'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=800',
+          'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800'
+        ]
+      },
+      {
+        id: 'stu-3',
         title: 'Thắng & Thu',
         date: '14-12-2025',
         coverImage: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=600',

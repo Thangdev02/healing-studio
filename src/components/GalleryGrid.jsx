@@ -4,13 +4,13 @@ import Container from './Container'
 
 const GalleryGrid = ({ albums }) => {
   return (
-    <Container className="py-80">
+    <Container className="py-20">
       <div 
         className="
           grid 
           // Sửa: Chỉ 2 cột trên màn hình lớn
           grid-cols-1 
-          md:grid-cols-2 
+          md:grid-cols-3
           // Đặt chiều rộng tối đa cho lưới (ví dụ: max-w-5xl) và căn giữa
           max-w-5xl 
           mx-auto 
@@ -33,8 +33,6 @@ const GalleryGrid = ({ albums }) => {
                         flex-col 
                         relative 
                         // Áp dụng dịch chuyển lên trên cho các item ở vị trí Cột 2
-                        ${isSecondColumn ? '-translate-y-36' : 'translate-y-0'}
-                        transition-transform 
                         duration-500
                     `}
                 >
@@ -50,7 +48,6 @@ const GalleryGrid = ({ albums }) => {
                     {/* Thông tin Album */}
                     <div className="mt-6 text-center">
                         <h3 className="text-2xl font-serif text-black">{album.title}</h3>
-                        <p className="text-gray-600 text-sm mt-1">{album.date}</p>
                     </div>
                 </Link>
             );

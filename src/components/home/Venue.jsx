@@ -3,12 +3,12 @@ import { motion } from 'framer-motion'
 
 const Venue = () => {
   const images = {
-    img1: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800",
-    img2: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800",
-    img3: "https://images.unsplash.com/photo-1606800052052-a08af7148866?w=800",
-    img4: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800",
-    img5: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800",
-    img6: "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800"
+    img1: "./images/ve2.jpg",
+    img2: "./images/ve12.jpg",
+    img3: "./images/ve11.jpg",
+    img4: "./images/ve8.jpg",
+    img5: "./images/ve10.jpg",
+    img6: "./images/ve1.jpg"
   }
 
   return (
@@ -37,7 +37,7 @@ const Venue = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
               className="overflow-hidden  shadow-lg"
-              style={{ height: '340px' }}
+              style={{ height: '380px' }}
             >
               <img
                 src={images.img4}
@@ -49,7 +49,7 @@ const Venue = () => {
 
           <div
             className="flex flex-col gap-6 flex-1 relative"
-            style={{ top: '-60px' }} // 👈 chỉnh giống Figma
+            style={{ top: '-60px' }} 
           >
             <motion.div
               initial={{ opacity: 0, y: -50 }}
@@ -63,6 +63,8 @@ const Venue = () => {
                 src={images.img2}
                 alt=""
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                    style={{ objectPosition: 'center 80%' }}
+
               />
             </motion.div>
 
@@ -77,7 +79,7 @@ const Venue = () => {
               <img
                 src={images.img5}
                 alt=""
-                className="w-90 h-full object-cover hover:scale-110 transition-transform duration-500"
+                className="w-95 h-full object-cover hover:scale-110 transition-transform duration-500"
               />
             </motion.div>
           </div>
@@ -99,6 +101,7 @@ const Venue = () => {
                 src={images.img3}
                 alt=""
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                 style={{ objectPosition: 'center 60%' }}
               />
             </motion.div>
 

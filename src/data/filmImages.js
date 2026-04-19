@@ -13,6 +13,13 @@ export const filmAlbums = {
         date: '08-12-2025',
         coverImage: 'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=600',
         videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+      },
+      {
+        id: 'film-tt-2',
+        title: 'Lễ Cưới Truyền Thống 2',
+        date: '08-12-2025',
+        coverImage: 'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=600',
+        videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
       }
     ],
     'phong-su': [
